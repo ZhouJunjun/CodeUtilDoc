@@ -2,7 +2,7 @@ Call Saved Rule用于调用已保存的加密规则，并支持表达式
 
 
 
-为方便举例，预先保存一个名为Around的规则，作用是为输入的字符串添加前缀**$***和添加后缀**#**
+为方便举例，预先保存一个名为Around的规则，作用是为输入的字符串添加前缀**$**和添加后缀**#**
 
 ![image-20220907173220747](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907173220747.png)
 
