@@ -30,3 +30,5 @@
 
     [Encode Or Decode]: https://github.com/ZhouJunjun/CodeUtilDoc/blob/master/doc/EncodeOrDecode.md
     [test]: https://qf.56.com
+    
+    [Encode Or Decode]
