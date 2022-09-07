@@ -28,4 +28,4 @@
 
 1. 顶部菜单
 
-    [Encode Or Decode]: https://github.com/ZhouJunjun/CodeUtilDoc/blob/main/doc/EncodeOrDecode.md
+    [Encode Or Decode]: https://github.com/ZhouJunjun/CodeUtilDoc/blob/master/doc/EncodeOrDecode.md
