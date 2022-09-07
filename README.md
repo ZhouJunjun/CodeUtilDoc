@@ -8,7 +8,7 @@
 
 #### 入口
 
-1.   顶部menu
+1.   顶部菜单
 
 ![image-20220907164153110](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907164153110.png)
 
@@ -21,3 +21,11 @@
 3.   java文件编辑器右键
 
 ![image-20220907164729044](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907164729044.png)
+
+
+
+#### 说明文档
+
+1. 顶部菜单
+
+    [Encode Or Decode]: https://github.com/ZhouJunjun/CodeUtilDoc/blob/main/doc/EncodeOrDecode.md
