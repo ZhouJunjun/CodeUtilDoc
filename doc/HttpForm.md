@@ -17,3 +17,9 @@
 3.   支持上传文件
 
      ![image-20230719163259083](https://raw.githubusercontent.com/ZhouJunjun/CodeUtilDoc/main/image/image-20230719163259083.png)
+
+4.   支持复杂的时间格式、发送请求前自动刷新为当前时间等
+
+     ![image-20230719164024190](https://raw.githubusercontent.com/ZhouJunjun/CodeUtilDoc/main/image/image-20230719164024190.png)
+
+     
