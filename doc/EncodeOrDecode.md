@@ -1,3 +1,15 @@
+### 加/解密调试工具
+
+#### 执行面板
+
+1.   先在右侧规则编辑区编辑执行规则，然后在左侧输入区输入需要加/解密的字符串，点击下方的【Run】即可执行；执行结果在中间的结果区展示。
+
+![image-20230719153053695](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20230719153053695.png?token=ACHFUOA54GA4G22X574HFZDEW6IWU)
+
+
+
+
+
 ### Call Saved Rule
 
 用于调用已保存的加密规则，并支持表达式。为方便举例，预先保存一个名为Around的规则，作用是为输入的字符串添加前缀@和添加后缀&
