@@ -10,7 +10,7 @@
 
 1.   顶部菜单
 
-![image-20220907164153110](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907164153110.png)
+     ![image-main-menu](https://raw.githubusercontent.com/ZhouJunjun/CodeUtilDoc/master/image/main-menu.png)
 
 2.   go文件编辑器右键
 
