@@ -14,13 +14,13 @@
 
 2.   go文件编辑器右键
 
-![image-20220907164447176](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907164447176.png)
+![image-20220907164447176](https://raw.githubusercontent.com/ZhouJunjun/CodeUtilDoc/master/image/go-menu.png)
 
 
 
 3.   java文件编辑器右键
 
-![image-20220907164729044](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907164729044.png)
+![image-20220907164729044](https://raw.githubusercontent.com/ZhouJunjun/CodeUtilDoc/master/image/java-menu.png)
 
 
 
@@ -39,4 +39,4 @@
 
 #### 最后
 1. 由于本插件提供敏感信息的本地存储功能，以及防止后续为我本人带来不必要的麻烦，所以本插件不做云存储。如果需要将本地存储的数据转移到别的电脑，可以使用导出/导入功能。
-1. 已为本插件的部分核心功能申请了专利，所以请勿抄袭并商用
+1. 已为本插件的部分核心功能申请了专利，所以请勿商用。
