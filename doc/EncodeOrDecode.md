@@ -1,63 +1,38 @@
 ### 加/解密调试工具
 
-#### 执行面板
+#### 执行面板Tab
 
-1.   先在右侧规则编辑区编辑执行规则，然后在左侧输入区输入需要加/解密的字符串，点击下方的【Run】即可执行；执行结果在中间的结果区展示。
+1.   先在**右侧规则编辑区**编辑执行规则，然后在左侧输入区输入需要加/解密的字符串，点击下方的【Run】即可执行；执行结果在中间的结果区展示。
+2.   加/密规则从上往下执行，规则1的输入为原始字符串，规则2的输入为规则1的执行结果..., 规则n的输入为规则n-1的执行结果
 
-![image-20230719153053695](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20230719153053695.png?token=ACHFUOA54GA4G22X574HFZDEW6IWU)
-
-
-
-
-
-### Call Saved Rule
-
-用于调用已保存的加密规则，并支持表达式。为方便举例，预先保存一个名为Around的规则，作用是为输入的字符串添加前缀@和添加后缀&
-
-![image-20220907174500312](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907174500312.png)
-
-![image-20220907174519696](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907174519696.png)
+![image-20230719153053695](https://raw.githubusercontent.com/ZhouJunjun/CodeUtilDoc/master/image/image-20230719153053695.png)
 
 
 
-1.   当只调用一个已保存的加密规则时，可将表达式简化为指定加密规则的名称，下面的计算规则等同于：先将aaa进行MD5计算，再拼接上@前缀和&后缀
+#### 配置面板Tab
 
-     ![image-20220907174624507](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907174624507.png)
+如果需要使用**执行面板Tab-右侧规则编辑区**中不存在的加密算法，可以使用自定义功能
 
+1.   下载 https://github.com/ZhouJunjun/encrypt-core，并创建EncryptRunner的子类，最后打包成jar。
 
+2.   将该jar包放到统一的目录下，并在Setting tab中指定该目录，最后重启idea即可完成导入。
 
-2.   当需要调用一个以上加密规则时，本工具提供两个变量，并支持多重调用和+操作符：
-
-     ***$input*** 初始输入值
-
-     ***$last*** 上一个规则的计算结果
-
-     ![image-20220907174653138](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907174653138.png)
-
-     上图示例中的表达式：**Around($input+Around(Around($last)))** 的计算过程为：
-
-     1.   $last等于上一个规则的计算结果，即MD5(aaa) = 47bce5c74f589f4867dbd57e9ca9f808
-
-     2.   Around($last) = @47bce5c74f589f4867dbd57e9ca9f808&
-
-     3.   Around(Around($last)) = @@47bce5c74f589f4867dbd57e9ca9f808&&
-
-     4.   $input + Around(Around($last)) = aaa@@47bce5c74f589f4867dbd57e9ca9f808&&
-
-     5.   Around($input + Around(Around($last))) = @aaa@@47bce5c74f589f4867dbd57e9ca9f808&&&
-
-上述举例的Around可以替换成任意不同的已保存的规则
+![image-20230719154042388](https://raw.githubusercontent.com/ZhouJunjun/CodeUtilDoc/main/image/image-20230719154042388.png)
 
 
 
-### Sub Bytes
+#### 复杂功能说明
 
-截取功能支持正向截取和反向截取
+#### Call Saved Rule
 
-1.   正向截取(下标从0开始)，举例：从下标1开始截取长度为2
+该规则支持简单的字符串编辑功能
 
-     ![image-20220907175053223](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907175053223.png)
+1.   变量$0代表用户输入，变量$1~n代表**右侧规则编辑区**的历史执行结果，变量$last代表**右侧规则编辑区**上一条规则的执行结果。
 
-2.   反向截取（-1等同于len-1，-2等同于len-2，类推），举例：从最后1位开始，反向截取长度为1
+2.   可使用运算符+号进行字符串拼接
 
-     ![image-20220907175304445](https://raw.githubusercontent.com/ZhouJunjun/image/master/markdown/image-20220907175304445.png)
+3.   可在计算过程中拼接字符串(使用反引号``)
+
+4.   可调用已保存的规则：SavedRuleName(变量)
+
+     ![image-20230719160105438](https://raw.githubusercontent.com/ZhouJunjun/CodeUtilDoc/main/image/image-20230719160105438.png)
